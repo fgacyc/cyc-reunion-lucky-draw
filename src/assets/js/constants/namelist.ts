@@ -585,7 +585,7 @@ export default [
   "Yap Kok Shin",
   "Kaily Lee",
   "Mico Wong Hoi Yi",
-  "Wong Khai Jie/Wong Kim Chow",
+  "Wong Kim Chow",
   "Carrie See",
   "Lew Khin Phing",
   "Felicia Chang Wei Shan",
