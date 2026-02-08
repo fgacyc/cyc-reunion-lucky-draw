@@ -551,7 +551,7 @@ export default [
   "Ler Yi Ming",
   "Zhi Xiong",
   "Erwinizan Mugit",
-  "Erwin Wife",
+  "Agnes Anak Berangan",
   "Gan Jeun Kit (Daniel)",
   "Lee Kin Fatt",
   "Loi Ying Ying",
