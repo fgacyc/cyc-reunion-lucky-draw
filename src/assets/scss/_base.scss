@@ -1,0 +1,123 @@
+@use "./mixins";
+@use "./breakpoints";
+@use "./colors";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap");
+
+@font-face {
+  font-family: tungsten;
+  src: url(@fonts/sf.otf);
+}
+
+*:not(input, textarea, select) {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+* {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family:
+    "Nunito Sans", 微軟正黑體, "Microsoft JhengHei", "Microsoft JhengHei UI",
+    "Microsoft YaHei", "Microsoft YaHei UI", "PingFang TC", "Lantinghei TC",
+    "Heiti TC", "Apple LiGothic", "PMingLiU", Arial, sans-serif;
+}
+
+#app {
+  padding: 0 3.125rem;
+  min-height: 100%;
+  overflow: hidden;
+  @include mixins.flex-center;
+
+  @media #{breakpoints.$mobile} {
+    padding: 0 5%;
+  }
+}
+
+.theme--red {
+  color: colors.$color-text-light;
+}
+
+.theme--purple {
+  background: linear-gradient(
+    0deg,
+    colors.$color-purple-step1 0.13%,
+    colors.$color-purple-step2 23.02%,
+    colors.$color-purple-step3 46.22%,
+    colors.$color-purple-step4 69.56%,
+    colors.$color-purple-step5 92.87%,
+    colors.$color-purple-step6 100%
+  );
+  color: colors.$color-text-light;
+}
+
+.main {
+  @include mixins.flex-center;
+  padding: 3.125rem 0;
+  width: 100%;
+  max-width: 4000px;
+  min-width: 4000px;
+  min-height: 1412px;
+  max-height: 1412px;
+  flex: 1 1 0;
+  position: relative;
+  background-size: auto;
+  background-repeat: no-repeat;
+  // background-clip: contain;
+  background-position: center;
+}
+
+.bg-img {
+  max-width: 4000px;
+  min-width: 4000px;
+  min-height: 1412px;
+  max-height: 1412px;
+  position: fixed;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.footer {
+  width: 100%;
+  padding: 0.3125rem;
+  font-size: 0.75rem;
+  text-align: center;
+  box-sizing: border-box;
+  flex: 0 1 auto;
+}
+
+a {
+  color: colors.$color-link;
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    color: colors.$color-link-hover;
+  }
+}
+
+.align--right {
+  text-align: right;
+}
+
+.hidden {
+  visibility: hidden;
+  font-family: tungsten;
+}

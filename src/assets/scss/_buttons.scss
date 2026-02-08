@@ -1,0 +1,94 @@
+@use './mixins';
+@use './colors';
+
+.solid-button {
+  display: inline-block;
+  border: none;
+  appearance: none;
+  @include mixins.shadow('large');
+  border-radius: 0.625rem;
+  background-color: #ff7200;
+  color: black;
+  padding: 1rem 0.625rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 2.75rem;
+  font-weight: 700;
+  font-family: tungsten;
+  letter-spacing: 0.115rem;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: #ff7200;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: #ff7200;
+    }
+  }
+}
+
+.solid-button--danger {
+  background-color: colors.$color-button-danger-background;
+  color: colors.$color-button-text;
+
+  &:hover {
+    background-color: colors.$color-button-danger-hover-background;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: colors.$color-button-danger-background;
+    }
+  }
+}
+
+.icon-button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  box-shadow: none;
+  appearance: none;
+  border-radius: 0;
+  color: colors.$color-link;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 2.5rem;
+  line-height: 1em;
+  text-align: center;
+
+  > svg {
+    width: 1em;
+    height: 1em;
+    display: block;
+  }
+
+  &:hover {
+    color: colors.$color-link-hover;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      color: colors.$color-link-hover;
+    }
+  }
+}
+
+.icon-button--small {
+  font-size: 1.5rem;
+}
